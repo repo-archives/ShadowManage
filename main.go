@@ -11,7 +11,7 @@ func main() {
 	var FilterUser = func(ctx *context.Context) {
 		beego.Debug("ddd", ctx.Request.RequestURI)
 		value := ctx.Input.Session("User")
-		if value!="Manager" && ctx.Request.RequestURI != "/login" {
+		if value!="Manager" && ctx.Request.RequestURI != "/login"&& ctx.Request.RequestURI != "/redis/sendemail" {
 			ctx.Redirect(302, "/login/index")
 		}
 	}

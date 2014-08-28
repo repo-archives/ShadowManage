@@ -26,7 +26,8 @@ func (this *RedisController) SendEmail() {
 
 	Userlist, _ := StoragePtr.GetList()
 	data, _ := json.Marshal(Userlist)
-	log.Critical("back", string(data))
+	log.Critical("back", string(data),this.getClientIp())
+
 }
 
 func (this *RedisController) Index() {
