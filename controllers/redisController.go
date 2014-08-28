@@ -1,14 +1,12 @@
 package controllers
 
 import (
-
-	. "UnionGo/Library"
+	. "github.com/zihuxinyu/GoLibrary"
 	"fmt"
 	"encoding/json"
 	"time"
 	"reflect"
 	"strings"
-	"github.com/astaxie/beego"
 	. "github.com/astaxie/beego/logs"
 )
 
@@ -17,26 +15,24 @@ type RedisController struct {
 
 }
 
-func Notify(){
+func Notify() {
 	go ExecSystem("ps -ef|grep ./server|grep -v grep|awk '{printf $2}'|xargs kill -1")
 }
 
-
-func(this *RedisController) SendEmail(){
+func (this *RedisController) SendEmail() {
 	log := NewLogger(10000)
 	log.SetLogger("smtp", `{"username":"aixinit@126.com","password":"9Loveme?","host":"smtp.126.com:25","sendTos":["491923016@qq.com"]}`)
 	StoragePtr = NewStorage()
 
 	Userlist, _ := StoragePtr.GetList()
-	data,_:=json.Marshal(Userlist)
-	log.Critical("back",string(data))
+	data, _ := json.Marshal(Userlist)
+	log.Critical("back", string(data))
 }
 
 func (this *RedisController) Index() {
 
 
-	ss := GetOptions()
-	beego.Debug(ss["key"])
+
 	this.TplNames = "redis.html"
 	this.Render()
 }

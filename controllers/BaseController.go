@@ -4,9 +4,6 @@ import (
 	"github.com/astaxie/beego"
 	"encoding/json"
 	"strings"
-	"github.com/astaxie/beego/orm"
-	. "UnionGo/models"
-	. "UnionGo/Library"
 )
 
 type BaseController struct {
@@ -28,6 +25,7 @@ func (c *BaseController) HasLogined() bool {
 
 //是否post提交
 func (this *BaseController) isPost() bool {
+
 	return this.Ctx.Request.Method == "POST"
 }
 //获取用户IP地址
@@ -50,36 +48,8 @@ func (c *BaseController) Json(i interface{}) string {
 	// b, _ := json.MarshalIndent(i, "", " ")
 	b, _ := json.Marshal(i)
 	return string(b)
-}
 
-func (c *BaseController) GetUserInfo() map[string]interface{}{
-	diy := map[string]interface {}{
-		//"User_name":"都是我",
-//		"Creatorid":c.GetSession("User_name").(string),
-//		"Createdate":TimeNowString(),
-//		"Modifierid":c.GetSession("User_name").(string),
-//		"Modifydate":TimeNowString(),
-		"Creatorid":"weibh",
-		"Createdate":TimeLocal(),
-
-		"Modifierid":"weibh",
-		"Modifydate":TimeLocal(),
-	}
-	return diy
 }
 
 
-func GetOptions() map[string]string {
-	if !Cache.IsExist("options") {
-		var result []*Option
-		o := orm.NewOrm()
-		o.QueryTable(&Option{}).All(&result)
-		options := make(map[string]string)
-		for _, v := range result {
-			options[v.Name] = v.Value
-		}
-		Cache.Put("options", options, 0)
-	}
-	v := Cache.Get("options")
-	return v.(map[string]string)
-}
+
