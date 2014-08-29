@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	"ShadowManage/controllers"
 	"github.com/astaxie/beego/context"
+	"ShadowManage/controllers"
 )
 
 func main() {
