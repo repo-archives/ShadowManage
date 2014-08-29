@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da6e8a98-cf2f-4c12-b178-5b29fe9f165c" name="Default" comment="go">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ss_server_linux_x86" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Archive.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sm_linux_x86.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ShadowManage.iws" />
@@ -88,8 +85,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="403" />
-    <option name="y" value="99" />
+    <option name="x" value="179" />
+    <option name="y" value="30" />
     <option name="width" value="1280" />
     <option name="height" value="719" />
   </component>
@@ -361,11 +358,15 @@
       <created>1409279052563</created>
       <updated>1409279052563</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="go">
+      <created>1409279674843</created>
+      <updated>1409279674843</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="403" y="99" width="1280" height="719" extended-state="6" />
+    <frame x="179" y="30" width="1280" height="719" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
