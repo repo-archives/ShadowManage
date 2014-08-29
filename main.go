@@ -2,22 +2,31 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/context"
-	"ShadowManage/controllers"
+	_ "ShadowManage/routers"
+	//. "github.com/zihuxinyu/GoLibrary"
 )
 
 func main() {
 	beego.SessionOn = true
-	var FilterUser = func(ctx *context.Context) {
-		beego.Debug("ddd", ctx.Request.RequestURI)
-		value := ctx.Input.Session("User")
-		if value!="Manager" && ctx.Request.RequestURI != "/login"&& ctx.Request.RequestURI != "/redis/sendemail" {
-			ctx.Redirect(302, "/login/index")
-		}
-	}
-	beego.InsertFilter("/redis/*",beego.BeforeExec,FilterUser)
-	beego.AutoRouter(&controllers.RedisController{})
-	beego.AutoRouter(&controllers.LoginController{})
+
+
+//	white := []string{
+//		"/login",
+//		"/redis/sendemail",
+//		"/redis/index",
+//		"/login/index",
+//	}
+
+
+//	var FilterUser = func(ctx *context.Context) {
+//		beego.Debug("ddd", ctx.Request.RequestURI)
+//		value := ctx.Input.Session("User")
+//		if value != "Manager" && !StringsContains(white, ctx.Request.RequestURI) {
+//			ctx.Redirect(302, "/login/index")
+//		}
+//	}
+//	beego.InsertFilter("/redis/*", beego.BeforeExec, FilterUser)
+
 	beego.Run()
 }
 

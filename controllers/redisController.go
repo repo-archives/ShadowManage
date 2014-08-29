@@ -8,6 +8,7 @@ import (
 	"reflect"
 	"strings"
 	. "github.com/astaxie/beego/logs"
+	"net"
 )
 
 type RedisController struct {
@@ -26,13 +27,16 @@ func (this *RedisController) SendEmail() {
 
 	Userlist, _ := StoragePtr.GetList()
 	data, _ := json.Marshal(Userlist)
-	log.Critical("back", string(data),this.getClientIp())
+	log.Critical("back", string(data), this.getClientIp())
 
 }
 
 func (this *RedisController) Index() {
 
-
+	info, _ := net.InterfaceAddrs()
+	for _, addr := range info {
+		fmt.Println(strings.Split(addr.String(), "/")[0])
+	}
 
 	this.TplNames = "redis.html"
 	this.Render()
