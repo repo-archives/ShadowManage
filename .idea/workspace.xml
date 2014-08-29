@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da6e8a98-cf2f-4c12-b178-5b29fe9f165c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Archive 2.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ss_server_linux_x86" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ShadowManage.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ShadowManage.iws" />
@@ -389,7 +387,11 @@
       <created>1409287441659</created>
       <updated>1409287441659</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="go">
+      <created>1409287522073</created>
+      <updated>1409287522073</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
